@@ -1,0 +1,3 @@
+;; used for testing
+
+{:options {:foo {:mode :average, :fork 3}}}
