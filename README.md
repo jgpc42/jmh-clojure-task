@@ -56,7 +56,7 @@ $ mkdir -p classes
 $ clj -X:jmh :format :pprint, :status true
 ```
 
-(If you're new to the `-X` flag, it allows us to omit the Clojure map curly braces (`{}`) on the command line.)
+> If you're new to the `-X` flag, it allows us to omit the Clojure map curly braces (`{}`) on the command line.
 
 Notice again that we must manually create the `classes` directory before running. Ensuring the `*compile-path*` directory exists is not automated by `tools.deps` as it is with other tools like Leiningen.
 
@@ -92,11 +92,11 @@ clj -Ajmh -M -e "(compile 'jmh.main)"
 cd uberdeps
 clj -M -m uberdeps.uberjar --aliases jmh --deps-file ../deps.edn --main-class jmh.main --target ../target/jmh.jar
 mkdir classes
-java -cp classes:../target/jmh.jar jmh.main :help
+cp ../jmh.edn .
+java -cp classes:../target/jmh.jar jmh.main '{:type :quick}'
 ```
 
-Note again that even when running as an uberjar, we still need to create the `classes` directory beforehand to enable the dynamic compilation.
-Running with `-Dfile.encoding=UTF-8` is also advisable depending on your platform due to the unicode characters JMH can output.
+Note again that even when running as an uberjar, we still need to create the `classes` directory beforehand to enable the dynamic compilation. Also, we copy `jmh.edn` to working directory so it can be found by the runner. This file can also be packaged as a jar resource so this step is unnecessary. Running with `-Dfile.encoding=UTF-8` is also advisable depending on your platform due to the unicode characters JMH can output.
 
 The procedure for other tools should be similarly straightforward.
 
