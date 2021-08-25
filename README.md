@@ -85,7 +85,7 @@ Along with integrating with the Clojure project tool of your choice, you can als
 For Clojure tools, we'll use the [`uberdeps`][udeps] library to create the jar. In the root of a hypothetical project:
 
 ```bash
-mkdir -p uberdeps
+mkdir -p classes uberdeps
 echo '{:deps {uberdeps/uberdeps {:mvn/version "1.0.4"}}}' > uberdeps/deps.edn
 clj -Ajmh -M -e "(compile 'jmh.main)"
 cd uberdeps
