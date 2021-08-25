@@ -120,7 +120,7 @@ Distributed under the Eclipse Public License, the same as Clojure.
 
 
 
-[ci]:        https://github.com/jgpc42/lein-jmh/blob/master/.github/workflows/test.yml
+[ci]:        https://github.com/jgpc42/jmh-clojure-task/blob/master/.github/workflows/test.yml
 [deps]:      https://github.com/clojure/tools.deps.alpha
 [jmh-clj]:   https://github.com/jgpc42/jmh-clojure
 [lein]:      http://github.com/technomancy/leiningen
