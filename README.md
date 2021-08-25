@@ -1,4 +1,5 @@
 [![Clojars Project](https://img.shields.io/clojars/v/jmh-clojure/task.svg)](https://clojars.org/jmh-clojure/task)
+[![](https://github.com/jgpc42/jmh-clojure-task/workflows/Test%20runner/badge.svg)][ci]
 
 ### Dependency and version information
 <details>
