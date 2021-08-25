@@ -96,7 +96,7 @@ cp ../jmh.edn .
 java -cp classes:../target/jmh.jar jmh.main '{:type :quick}'
 ```
 
-Note again that even when running as an uberjar, we still need to create the `classes` directory beforehand to enable the dynamic compilation. Also, we copy `jmh.edn` to working directory so it can be found by the runner. This file can also be packaged as a jar resource so this step is unnecessary. Running with `-Dfile.encoding=UTF-8` is also advisable depending on your platform due to the unicode characters JMH can output.
+Note again that even when running as an uberjar, we still need to create the `classes` directory beforehand to enable the dynamic compilation. Additionally, we copy `jmh.edn` to the working directory so it can be found by the runner. This file can also be packaged as a jar resource so this step is optional. Running with `-Dfile.encoding=UTF-8` is also advisable depending on your platform due to the unicode characters JMH can output.
 
 The procedure for other tools should be similarly straightforward.
 
